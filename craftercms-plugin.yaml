@@ -1,0 +1,74 @@
+# This file describes a plugin for use in Crafter CMS
+
+# The version of the format for this file
+descriptorVersion: 2
+
+# Describe the plugin
+plugin:
+  type: toolbar
+  id: org.craftercms.plugin.exampletoolbar
+  name: Studio Toolbar plugin
+  tags:
+    - bulk
+    - edit
+    - toolbar
+    - content
+  version:
+    major: 1
+    minor: 0
+    patch: 4
+  description: A sample tool bar plugin
+  documentation: "https://raw.githubusercontent.com/phuongnq/craftercms-sample-sidebar-plugin/master/README.md"
+  website:
+    name: Sample Toolbar
+    url: https://github.com/phuongnq/craftercms-sample-sidebar-plugin
+  media:
+    screenshots:
+      - title: CrafterCMS
+        description: CrafterCMS sample toolbar plugin
+        url: "https://raw.githubusercontent.com/phuongnq/craftercms-sample-sidebar-plugin/master/.crafter/logo.png"
+  developer:
+    company:
+      name: Phil Nguyen
+      email: phil.nguyen@craftercms.com
+      url: https://github.com/phuongnq
+  build:
+    id: cafebabe4e6a24b5e0481d6ba87901d0b02716c8
+    date: 2022-07-19T00:00:00Z
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  crafterCmsVersions:
+    - major: 4
+      minor: 0
+      patch: 1
+  crafterCmsEditions:
+    - community
+    - enterprise
+  parameters:
+  installation:
+    - type: preview-app
+      parentXpath: //widget[@id='craftercms.components.PreviewToolbar']
+      elementXpath: //plugin[@id='org.craftercms.sampleToolbarPlugin.components.reactComponent']
+      element:
+        name: configuration
+        children:
+        - name: rightSection
+          children:
+          - name: widgets
+            children:
+            - name: widget
+              attributes:
+              - name: id
+                value: org.craftercms.sampleToolbarPlugin.components.reactComponent
+              children:
+              - name: plugin
+                attributes:
+                - name: id
+                  value: org.craftercms.plugin.exampletoolbar
+                - name: type
+                  value: toolbar
+                - name: name
+                  value: test-toolbar
+                - name: file
+                  value: index.modern.js

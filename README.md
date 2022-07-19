@@ -1,0 +1,1 @@
+# craftercms-sample-sidebar-plugin
