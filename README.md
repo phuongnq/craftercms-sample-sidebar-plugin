@@ -1,1 +1,1 @@
-# craftercms-sample-sidebar-plugin
+# craftercms-sample-toolbar-plugin
